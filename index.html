@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dolphin - Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+
+<header class="header">
+  <!-- Logo kiri -->
+  <div class="logo">Dolphin Four Store</div>
+
+  <!-- Kanan -->
+  <div class="header-right">
+    <!-- Keranjang -->
+  <a href="#" id="cart-btn">🛒<span id="cart-count"> 0</span></a>
+
+    <!-- Hamburger -->
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- Sidebar Menu -->
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#contact">Contact</a>
+  <span class="close-btn" onclick="toggleMenu()">&times;</span>
+</nav>
+
+
+  <!-- Hero Section dengan Background Video -->
+  <section id="hero" class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="asset/backgoundhero1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h2>Segarnya Lautan, Kini Dalam Minuman!!</h2>
+      <p>Rasakan kesegaran dan kelezatan yang tak terlupakan</p>
+      <a href="#menu" class="cta-btn">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Menu Produk -->
+  <section id="menu" class="produk">
+    <h2>Menu Kami</h2>
+    <div class="produk-container">
+      <div class="produk-item" data-name="Arren Shoot" data-price="10000">
+        <img src="asset/produck1.jpeg" alt="Arren Shoot">
+        <h3>Arren Shoot</h3>
+        <p>Rp 10.000</p>
+        <button class="add-to-cart">Masukan Keranjang</button>
+      </div>
+      <div class="produk-item" data-name="Klasik Kopi" data-price="9000">
+        <img src="asset/produck2.jpeg" alt="Klasik Kopi">
+        <h3>Klasik Kopi</h3>
+        <p>Rp 9.000</p>
+        <button class="add-to-cart">Masukan Keranjang</button>
+      </div>
+      <div class="produk-item" data-name="Matcha Bliss" data-price="10000">
+        <img src="asset/produck3.jpeg" alt="Matcha Bliss">
+        <h3>Matcha Bliss</h3>
+        <p>Rp 10.000</p>
+        <button class="add-to-cart">Masukan Keranjang</button>
+      </div>
+      <div class="produk-item" data-name="Lumpia Sosis" data-price="5000">
+        <img src="asset/produck4.jpeg" alt="Lumpia Sosis">
+        <h3>Lumpia Sosis</h3>
+        <p>Rp 5.000</p>
+        <button class="add-to-cart">Masukan Keranjang</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="contact">
+  <h2>Kontak Kami</h2>
+  <a href="https://wa.me/6289667045900" target="_blank" class="whatsapp-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+  
+</section>
+
+  <!-- Keranjang Modal -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <span id="close-cart">&times;</span>
+    <h2>Keranjang Belanja</h2>
+    <ul id="cart-items-list"></ul>
+    <h3>Total: Rp <span id="cart-total">0</span></h3>
+
+    <!-- Pilih Metode Pembayaran -->
+    <label for="payment-method">Metode Pembayaran:</label>
+    <select id="payment-method">
+      <option value="COD">COD (Bayar di Tempat)</option>
+      <option value="Dana">Dana</option>
+      <option value="Gopay">Gopay</option>
+    </select>
+
+    <!-- Input Alamat -->
+    <label for="shipping-address">Alamat Pengiriman:</label>
+    <textarea id="shipping-address" rows="3" placeholder="Masukkan alamt kelas Anda"></textarea>
+
+    <button class="checkout-btn" id="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dolphin Store. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
